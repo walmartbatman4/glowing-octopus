@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{lcc}
+\toprule
+\textbf{Hyperparameter} & \textbf{2D Target ($m, M$)} & \textbf{6D Target (Full OmniFold)} \\
+\midrule
+Target observables ($x$) & 2 ($m$, Multiplicity) & 6 ($m, M, w, m_{SD}, z_g, \tau_2$) \\
+Conditioning inputs ($y$) & 4 ($m, M, p_T, \eta$) & 8 ($m, M, w, m_{SD}, z_g, \tau_2, p_T, \eta$) \\
+RQ-Spline Transforms ($K$) & 6 & 8 \\
+Spline Bins ($K_b$) & 8 & 10 \\
+Conditioner MLP Hidden & 3 layers $\times$ 128 & 3 layers $\times$ 256 \\
+Context Embedding $h(y)$ & 4 $\to$ 64 $\to$ 64 & 8 $\to$ 128 $\to$ 128 \\
+Feature Permutation & Reverse alternate & Alternating forward/reverse \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,15 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Method} & \textbf{Pythia $W_1$ ($m$/$M$)} & \textbf{Pythia KS ($m$/$M$)} & \textbf{Pair-C2ST AUC} & \textbf{Herwig $W_1$ ($m$/$M$)} & \textbf{Herwig KS ($m$/$M$)} \\
+\midrule
+Reco-as-answer & 3.60 / 7.09 & 0.208 / 0.329 & -- & 2.33 / 7.50 & 0.115 / 0.294 \\
+Prior-only & 0.443 / 0.722 & 0.034 / 0.036 & 0.818 [Fail] & 1.14 / 2.55 & 0.055 / 0.098 \\
+IBU (2D) & 0.412 / 0.589 & 0.028 / 0.031 & -- & 1.25 / 2.81 & 0.062 / 0.112 \\
+\textbf{cINN 2D (Ours)} & \textbf{0.289 / 0.216} & \textbf{0.021 / 0.016} & \textbf{0.4231 $\pm$ 0.0109 [PASS]} & \textbf{0.85 / 0.20} & \textbf{0.055 / 0.010} \\
+\textbf{cINN 6D (Ours)} & \textbf{0.302 / 0.223} & \textbf{0.018 / 0.016} & \textbf{0.4502 $\pm$ 0.0192 [PASS]} & \textbf{0.70 / 0.25} & \textbf{0.044 / 0.017} \\
+\bottomrule
+\end{tabular}
+\end{table}

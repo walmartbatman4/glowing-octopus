@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unfold"
+version = "0.1.0"
+description = "cINN Unbinned Detector Unfolding (Z+jets, OmniFold dataset)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "energyflow",
+    "pyunfold",
+    "zuko",
+    "lightgbm",
+    "matplotlib",
+    "mplhep",
+    "pyyaml",
+    "tqdm",
+    "pytest",
+    "pandas",
+    "h5py"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

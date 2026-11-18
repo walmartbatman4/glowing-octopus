@@ -1,0 +1,16 @@
+evaluation:
+  num_bootstrap: 50
+  sbc:
+    num_events: 1000
+    num_samples: 100
+  c2st:
+    n_estimators: 100
+    null_repeats: 20
+    learning_rate: 0.05
+  slices:
+    num_quantiles: 5
+  ibu:
+    num_iterations: 4
+    bins_per_dim: 20
+  batch_size: 2048
+  device: "cuda"

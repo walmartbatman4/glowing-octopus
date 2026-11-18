@@ -1,0 +1,57 @@
+\ProvidesPackage{beamerthememinimal}
+
+\usepackage{xcolor}
+
+% IITH Colors
+\definecolor{IITHorange}{RGB}{243, 130, 33} % IITH Orange
+\definecolor{IITHyellow}{RGB}{254, 203, 10} % IITH Yellow accent
+\definecolor{IITHnavy}{RGB}{15, 41, 66}     % Deep Contrast Navy
+\definecolor{IITHdark}{RGB}{30, 41, 59}     % Slate text
+\definecolor{IITHlight}{RGB}{248, 250, 252} % Soft background
+
+% Theme colors
+\setbeamercolor{palette primary}{bg=IITHorange,fg=white}
+\setbeamercolor{palette secondary}{bg=IITHorange,fg=white}
+\setbeamercolor{palette tertiary}{bg=IITHnavy,fg=white}
+\setbeamercolor{palette quaternary}{bg=IITHorange,fg=white}
+
+\setbeamercolor{title}{fg=IITHnavy}
+\setbeamercolor{subtitle}{fg=IITHorange}
+\setbeamercolor{frametitle}{bg=IITHorange,fg=white}
+\setbeamercolor{structure}{fg=IITHorange}
+\setbeamercolor{section in toc}{fg=IITHorange}
+\setbeamercolor{normal text}{fg=IITHdark}
+\setbeamercolor{item}{fg=IITHorange}
+\setbeamercolor{subitem}{fg=IITHorange!80}
+
+\setbeamercolor{block title}{bg=IITHorange!20,fg=IITHnavy}
+\setbeamercolor{block body}{bg=IITHlight,fg=IITHdark}
+
+% Navigation & symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Frame Title with clean IITH bar
+\setbeamertemplate{frametitle}{
+    \leavevmode
+    \begin{beamercolorbox}[wd=\paperwidth,ht=3.2ex,dp=1.2ex,leftskip=1em,rightskip=1em]{frametitle}
+        \textbf{\insertframetitle}
+    \end{beamercolorbox}
+    \vspace{-0.1cm}
+    \textcolor{IITHyellow}{\hrule height 2pt}
+}
+
+% Footline with IITH Orange and page numbers
+\setbeamertemplate{footline}{
+    \leavevmode
+    \hbox{%
+    \begin{beamercolorbox}[wd=0.4\paperwidth,ht=2.5ex,dp=1.1ex,left,leftskip=1em]{palette tertiary}%
+        \tiny Alfien Jessurun P \& Boopesh D (IITH)
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.4\paperwidth,ht=2.5ex,dp=1.1ex,center]{palette tertiary}%
+        \tiny cINN Multidimensional Detector Unfolding
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.2\paperwidth,ht=2.5ex,dp=1.1ex,right,rightskip=1em]{palette primary}%
+        \tiny \insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}}%
+    \vskip0pt%
+}

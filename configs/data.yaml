@@ -1,0 +1,68 @@
+seed: 42
+data_dir: "data/raw"
+processed_dir: "data/processed"
+splits_dir: "data/splits"
+
+matching:
+  dr_max: 0.4  # DeltaR matching cutoff between gen and sim hardest jet
+
+splits:
+  train_frac: 0.70
+  val_frac: 0.15
+  test_frac: 0.15
+
+observables_2d:
+  target:
+    - mass
+    - mult
+  conditioning:
+    - mass
+    - mult
+    - pt
+    - eta
+
+observables_6d:
+  target:
+    - mass
+    - mult
+    - width
+    - sdm
+    - zg
+    - tau2
+  conditioning:
+    - mass
+    - mult
+    - width
+    - sdm
+    - zg
+    - tau2
+    - pt
+    - eta
+
+transforms_config:
+  mass:
+    type: "log"
+    eps: 1.0e-3
+  mult:
+    type: "dequantize"
+  width:
+    type: "logit01"
+    scale: 1.0
+    delta: 1.0e-4
+  sdm:
+    type: "log"
+    eps: 1.0e-3
+  zg:
+    type: "zero_inflated_logit"
+    scale: 0.5   # zg is in [0, 0.5]
+    delta: 1.0e-4
+    noise_scale: 1.0e-4
+  tau2:
+    type: "logit01"
+    scale: 1.0
+    delta: 1.0e-4
+  pt:
+    type: "log"
+    eps: 1.0e-3
+  eta:
+    type: "identity"

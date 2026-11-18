@@ -1,2 +1,23 @@
 .vscode/
 .venv/
+python312/
+
+# Data directories (reproducible via make data / Zenodo 3548091)
+data/raw/
+data/processed/
+data/splits/
+
+# Intermediate model weights & large caches
+results/checkpoints/
+results/equations/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# User / prompt task scratch files
+agent_task*.md
+plan_v2.md
+
+# External format/template references
+ProjectReport_Format.pdf
+*.pptx

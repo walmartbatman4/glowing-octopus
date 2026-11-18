@@ -1,0 +1,29 @@
+model:
+  type: "nsf"  # "nsf" or "affine"
+  dim_x: 6
+  dim_y: 8
+  num_transforms: 8
+  hidden_features: [256, 256, 256]
+  num_bins: 10
+  context_embedding:
+    enabled: true
+    hidden_features: [128, 128]
+
+training:
+  batch_size: 1024
+  epochs: 35
+  learning_rate: 1.0e-3
+  weight_decay: 1.0e-5
+  grad_clip: 1.0
+  early_stopping_patience: 10
+  lr_schedule: "cosine"
+  seeds: [0, 1, 2]
+  device: "cuda"
+
+data:
+  config_path: "configs/data.yaml"
+  mode: "6d"
+  processed_pythia: "data/processed/pythia26_6d.npz"
+  processed_herwig: "data/processed/herwig_6d.npz"
+  splits_dir: "data/splits"
+  checkpoint_dir: "results/checkpoints"
